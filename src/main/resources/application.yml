@@ -1,0 +1,21 @@
+# 显示后台处理的SQL语句
+spring.jpa.show-sql: true
+# 自动检查实体和数据库表是否一致，如果不一致则会进行更新数据库表
+spring.jpa.hibernate.ddl-auto: update
+spring.jpa.open-in-view: false
+
+
+spring:
+  messages:
+    basename: i18n/Messages,i18n/Pages
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver      # 配置MySQL的驱动程序类
+    url: jdbc:mysql://localhost:3306/security?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC          # 数据库连接地址
+    username: root                                  # 数据库用户名
+    password: 123456
+
+
+jwt:
+ secret: secret
+ expiration: 7200000
+ token: Authorization
